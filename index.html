@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoJo's Multiplayer Shooter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #FFD700;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            color: #FFFFFF;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        canvas {
+            border: 4px solid #FFD700;
+            background-color: #1a1a2e;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            cursor: crosshair;
+        }
+
+        .controls {
+            background: rgba(0, 0, 0, 0.7);
+            color: #FFFFFF;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 2px solid #FFD700;
+        }
+
+        .controls h2 {
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+
+        .controls p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .key {
+            display: inline-block;
+            background: #667eea;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⭐ JoJo's Bizarre Shooter ⭐</h1>
+        <p class="subtitle">¡Batalla multijugador en el estilo de JoJo's!</p>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="controls">
+            <h2>Controles</h2>
+            <p><span class="key">W</span> <span class="key">A</span> <span class="key">S</span> <span class="key">D</span> - Movimiento</p>
+            <p><span class="key">CLICK</span> - Disparar hacia el ratón</p>
+            <p><span class="key">ESPACIO</span> - Dash (movimiento rápido)</p>
+            <p><span class="key">RATÓN</span> - Apuntar</p>
+        </div>
+    </div>
+
+    <script src="jojos-multiplayer-game.js"></script>
+</body>
+</html>
